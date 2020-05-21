@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<testsuite failures="0" name="cucumber.runtime.formatter.JUnitFormatter" skipped="0" tests="1" time="22.947295">
+    <testcase classname="Login and open lessons area for members" name="Login with valid user name and password" time="22.947295">
+        <system-out>
+            <![CDATA[Given User launch browser...................................................passed
+And User open url "http://localhost/wow/index.php"..........................passed
+Then User presented with WOW home page having title "Welcome"...............passed
+And User click on Proceed To Lessons button.................................passed
+Then User presented with WOW home page having title "Login".................passed
+And User Enter email "john@test.com.au".....................................passed
+And User Enter password "goodday"...........................................passed
+And User press login button.................................................passed
+Then User presented with WOW home page having title "Login Success".........passed
+]]>
+        </system-out>
+    </testcase>
+</testsuite>
