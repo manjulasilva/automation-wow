@@ -3,46 +3,68 @@
     "line": 1,
     "elements": [
       {
+        "before": [
+          {
+            "result": {
+              "duration": 337500,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hooks.beforevaldiation()"
+            }
+          }
+        ],
         "line": 4,
-        "name": "Login with valid user name and password",
+        "name": "Enter details and get activation code",
         "description": "",
-        "id": "login-and-open-lessons-area-for-members;login-with-valid-user-name-and-password",
+        "id": "create-new-account---send-activation-code;enter-details-and-get-activation-code",
+        "after": [
+          {
+            "result": {
+              "duration": 1688778400,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hooks.Aftervaldiation()"
+            }
+          }
+        ],
         "type": "scenario",
         "keyword": "Scenario",
         "steps": [
           {
             "result": {
-              "duration": 9972840300,
+              "duration": 7535818400,
               "status": "passed"
             },
             "line": 5,
-            "name": "User launch browser",
+            "name": "User open desired browser",
             "match": {
-              "location": "wowStepsForLogin.user_launch_browser()"
+              "location": "stepDef_wowHomePage.user_open_desired_browser()"
             },
             "keyword": "Given "
           },
           {
             "result": {
-              "duration": 622884500,
+              "duration": 969537600,
               "status": "passed"
             },
             "line": 6,
-            "name": "User open url \"http://localhost/wow/index.php\"",
+            "name": "User open WOW home page \"http://localhost/wow/index.php\"",
             "match": {
               "arguments": [
                 {
                   "val": "http://localhost/wow/index.php",
-                  "offset": 15
+                  "offset": 25
                 }
               ],
-              "location": "wowStepsForLogin.user_open_url(String)"
+              "location": "stepDef_wowHomePage.user_open_WOW_home_page(String)"
             },
             "keyword": "And "
           },
           {
             "result": {
-              "duration": 3121890000,
+              "duration": 3048347100,
               "status": "passed"
             },
             "line": 7,
@@ -54,103 +76,115 @@
                   "offset": 48
                 }
               ],
-              "location": "wowStepsForLogin.user_presented_with_WOW_home_page_having_title(String)"
+              "location": "stepDef_wowHomePage.user_presented_with_WOW_home_page_having_title(String)"
             },
             "keyword": "Then "
           },
           {
             "result": {
-              "duration": 556014800,
+              "duration": 3686279800,
               "status": "passed"
             },
             "line": 8,
-            "name": "User click on Proceed To Lessons button",
+            "name": "User click on Create an Account button",
             "match": {
-              "location": "wowStepsForLogin.user_click_on_Proceed_To_Lessons_button()"
+              "location": "stepDef_wowHomePage.user_click_on_Create_an_Account_button()"
             },
             "keyword": "And "
           },
           {
             "result": {
-              "duration": 3018615700,
+              "duration": 2923761800,
               "status": "passed"
             },
             "line": 9,
-            "name": "User presented with WOW home page having title \"Login\"",
+            "name": "User presented with WOW home page having title \"Registration Form\"",
             "match": {
               "arguments": [
                 {
-                  "val": "Login",
+                  "val": "Registration Form",
                   "offset": 48
                 }
               ],
-              "location": "wowStepsForLogin.user_presented_with_WOW_home_page_having_title(String)"
+              "location": "stepDef_wowHomePage.user_presented_with_WOW_home_page_having_title(String)"
             },
             "keyword": "Then "
           },
           {
             "result": {
-              "duration": 1717622300,
+              "duration": 317358600,
               "status": "passed"
             },
             "line": 10,
-            "name": "User Enter email \"john@test.com.au\"",
+            "name": "User type user name \"Bon\"",
             "match": {
               "arguments": [
                 {
-                  "val": "john@test.com.au",
-                  "offset": 18
-                }
-              ],
-              "location": "wowStepsForLogin.user_Enter_email(String)"
-            },
-            "keyword": "And "
-          },
-          {
-            "result": {
-              "duration": 455782700,
-              "status": "passed"
-            },
-            "line": 11,
-            "name": "User Enter password \"goodday\"",
-            "match": {
-              "arguments": [
-                {
-                  "val": "goodday",
+                  "val": "Bon",
                   "offset": 21
                 }
               ],
-              "location": "wowStepsForLogin.user_Enter_password(String)"
+              "location": "stepDef_wowRegistrationPage.user_type_user_name(String)"
             },
             "keyword": "And "
           },
           {
             "result": {
-              "duration": 489088900,
+              "duration": 433949100,
               "status": "passed"
             },
-            "line": 12,
-            "name": "User press login button",
-            "match": {
-              "location": "wowStepsForLogin.user_press_login_button()"
-            },
-            "keyword": "And "
-          },
-          {
-            "result": {
-              "duration": 2992555800,
-              "status": "passed"
-            },
-            "line": 13,
-            "name": "User presented with WOW home page having title \"Login Success\"",
+            "line": 11,
+            "name": "User type email \"Bon@test.com.au\"",
             "match": {
               "arguments": [
                 {
-                  "val": "Login Success",
-                  "offset": 48
+                  "val": "Bon@test.com.au",
+                  "offset": 17
                 }
               ],
-              "location": "wowStepsForLogin.user_presented_with_WOW_home_page_having_title(String)"
+              "location": "stepDef_wowRegistrationPage.user_type_email(String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 164062400,
+              "status": "passed"
+            },
+            "line": 12,
+            "name": "User click on accept terms and condtion checkbox",
+            "match": {
+              "location": "stepDef_wowRegistrationPage.user_click_on_accept_terms_and_condtion_checkbox()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 3756870300,
+              "status": "passed"
+            },
+            "line": 13,
+            "name": "User press Send Activation Code button",
+            "match": {
+              "location": "stepDef_wowRegistrationPage.user_press_Send_Activation_Code_button()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 3026334200,
+              "status": "passed"
+            },
+            "line": 14,
+            "name": "User presented with a response \"Great. Just one more step to go\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Great. Just one more step to go",
+                  "offset": 32
+                }
+              ],
+              "location": "stepDef_wowRegistrationPage.user_presented_with_a_response(String)"
             },
             "keyword": "Then "
           }
@@ -163,10 +197,206 @@
         ]
       }
     ],
-    "name": "Login and open lessons area for members",
+    "name": "Create new account - Send Activation Code",
     "description": "",
-    "id": "login-and-open-lessons-area-for-members",
+    "id": "create-new-account---send-activation-code",
     "keyword": "Feature",
-    "uri": "src/test/java/features/loginToLessons.feature"
+    "uri": "CreateNewAccount_sendActivationCode.feature"
+  },
+  {
+    "line": 1,
+    "elements": [
+      {
+        "before": [
+          {
+            "result": {
+              "duration": 112700,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hooks.beforevaldiation()"
+            }
+          }
+        ],
+        "line": 4,
+        "name": "Login with valid user name and password",
+        "description": "",
+        "id": "login-with-valid-credentials-and-go-to-lessons-area-for-members;login-with-valid-user-name-and-password",
+        "after": [
+          {
+            "result": {
+              "duration": 1068430600,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hooks.Aftervaldiation()"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 4329664700,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "User open desired browser",
+            "match": {
+              "location": "stepDef_wowHomePage.user_open_desired_browser()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 648327600,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "User open WOW home page \"http://localhost/wow/index.php\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "http://localhost/wow/index.php",
+                  "offset": 25
+                }
+              ],
+              "location": "stepDef_wowHomePage.user_open_WOW_home_page(String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 2894177400,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "User presented with WOW home page having title \"Welcome\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Welcome",
+                  "offset": 48
+                }
+              ],
+              "location": "stepDef_wowHomePage.user_presented_with_WOW_home_page_having_title(String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 3470633200,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "User click on Proceed To Lessons button",
+            "match": {
+              "location": "stepDef_wowHomePage.user_click_on_Proceed_To_Lessons_button()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 2881741900,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "User presented with WOW home page having title \"Login\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Login",
+                  "offset": 48
+                }
+              ],
+              "location": "stepDef_wowHomePage.user_presented_with_WOW_home_page_having_title(String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 430872200,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "User Enter email \"john@test.com.au\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "john@test.com.au",
+                  "offset": 18
+                }
+              ],
+              "location": "stepDef_wowLoginPage.user_Enter_email(String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 320733900,
+              "status": "passed"
+            },
+            "line": 11,
+            "name": "User Enter password \"goodday\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "goodday",
+                  "offset": 21
+                }
+              ],
+              "location": "stepDef_wowLoginPage.user_Enter_password(String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 3270280000,
+              "status": "passed"
+            },
+            "line": 12,
+            "name": "User press login button",
+            "match": {
+              "location": "stepDef_wowLoginPage.user_press_login_button()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 3000747200,
+              "status": "passed"
+            },
+            "line": 13,
+            "name": "User presented with WOW home page having title \"Login Success\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Login Success",
+                  "offset": 48
+                }
+              ],
+              "location": "stepDef_wowHomePage.user_presented_with_WOW_home_page_having_title(String)"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "line": 3,
+            "name": "@SmokeTest"
+          },
+          {
+            "line": 3,
+            "name": "@RegressionTest"
+          }
+        ]
+      }
+    ],
+    "name": "Login with valid credentials and go to lessons area for members",
+    "description": "",
+    "id": "login-with-valid-credentials-and-go-to-lessons-area-for-members",
+    "keyword": "Feature",
+    "uri": "LoginWithValidCredentials.feature"
   }
 ]

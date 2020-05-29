@@ -34,7 +34,7 @@ public class screenshotManager {
     }
 
 	
-	String getNewImgeFileName(String imgPath) {
+	public String getNewImgeFileName(String imgPath) {
 		// to dynamically generate a unique file name for screenshot like: 
 		// C:\01_work\TER\TER_Java\screenShot\TER_0130_07-13-56.jpg
 		  

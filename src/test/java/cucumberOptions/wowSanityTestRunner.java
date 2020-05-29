@@ -7,7 +7,8 @@ import cucumber.api.junit.Cucumber;
 
 	@RunWith(Cucumber.class)
 	@CucumberOptions(
-			features = "src/test/java/features/loginToLessons.feature",
+			//features = "src/test/java/features/LoginWithValidCredentials.feature",
+			features = "src/test/java/features",
 			
 			// glue simply look for location where the steps are implemented
 			glue = "stepDefinitions",
@@ -22,6 +23,7 @@ import cucumber.api.junit.Cucumber;
 			//strict = true,
 			
 			tags = "@SmokeTest",
+			//tags = {"@RegressionTest","@Vegitable_SmokeTest","@Vegitable_SmokeTest"},
 			plugin = {"pretty", "html:target/htmlReport", "json:target/cucumber.json", "junit:target/cukes.xml"}
 	)
 	

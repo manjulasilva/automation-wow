@@ -1,5 +1,7 @@
 package automationFramework;
 
+// PAGE BASE  THIS CLASS IS NO LONGER USED.   JEST KEPT FOR FUTHER WORK. 28/MAY/2020
+
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.util.HashMap;
@@ -38,6 +40,9 @@ public class pageBase {
 		Integer implicitWaitTime; 
 		Boolean maxWindow;
 		
+		Boolean flagMobileEmulation;
+		String mobileEmuDeviceName;
+		
 		
 		prop = pageBase.getConfig();
 		
@@ -49,6 +54,9 @@ public class pageBase {
 		locationOfGeckoDriver = prop.getProperty("geckoDriver");
 		
 		maxWindow = Boolean.parseBoolean( prop.getProperty("maxWindow"));
+		
+		flagMobileEmulation = Boolean.parseBoolean(prop.getProperty("flagMobileEmulation"));
+		mobileEmuDeviceName = prop.getProperty("mobileEmuDeviceName");
 		
 		
 		
@@ -64,7 +72,12 @@ public class pageBase {
 			System.setProperty("webdriver.chrome.driver", locationOfChromeDriver);
 			ChromeOptions options = new ChromeOptions();	    
 		    
-		    if (maxWindow) {
+			// set Chrome mobileEmulation
+			if (flagMobileEmulation) {
+				Map<String, String> mobileEmulation = new HashMap<String, String>();
+				mobileEmulation.put("deviceName", mobileEmuDeviceName);
+				options.setExperimentalOption("mobileEmulation", mobileEmulation);
+			} else if (maxWindow) {
 				options.addArguments("--start-maximized");
 			}
 		    driver=new ChromeDriver(options); 

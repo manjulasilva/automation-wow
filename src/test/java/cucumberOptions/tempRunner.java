@@ -18,7 +18,8 @@ public class tempRunner {
 		prop = pageBase.getConfig();		
 		pgHome = new wowHomePage(driver);
 		pgHome.driver.get("http://localhost/wow/index.php");
-		pgHome.getGoToLessonsButton().click();
+		//pgHome.getGoToLessonsButton().click();
+		pgHome.getCreateNewAccountButton().click();
 		System.out.println("run complete");
 	}
 

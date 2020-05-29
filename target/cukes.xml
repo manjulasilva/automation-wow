@@ -1,9 +1,24 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testsuite failures="0" name="cucumber.runtime.formatter.JUnitFormatter" skipped="0" tests="1" time="22.947295">
-    <testcase classname="Login and open lessons area for members" name="Login with valid user name and password" time="22.947295">
+<testsuite failures="0" name="cucumber.runtime.formatter.JUnitFormatter" skipped="0" tests="2" time="49.867156">
+    <testcase classname="Create new account - Send Activation Code" name="Enter details and get activation code" time="27.551435">
         <system-out>
-            <![CDATA[Given User launch browser...................................................passed
-And User open url "http://localhost/wow/index.php"..........................passed
+            <![CDATA[Given User open desired browser.............................................passed
+And User open WOW home page "http://localhost/wow/index.php"................passed
+Then User presented with WOW home page having title "Welcome"...............passed
+And User click on Create an Account button..................................passed
+Then User presented with WOW home page having title "Registration Form".....passed
+And User type user name "Bon"...............................................passed
+And User type email "Bon@test.com.au".......................................passed
+And User click on accept terms and condtion checkbox........................passed
+And User press Send Activation Code button..................................passed
+Then User presented with a response "Great. Just one more step to go".......passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="Login with valid credentials and go to lessons area for members" name="Login with valid user name and password" time="22.315721">
+        <system-out>
+            <![CDATA[Given User open desired browser.............................................passed
+And User open WOW home page "http://localhost/wow/index.php"................passed
 Then User presented with WOW home page having title "Welcome"...............passed
 And User click on Proceed To Lessons button.................................passed
 Then User presented with WOW home page having title "Login".................passed
